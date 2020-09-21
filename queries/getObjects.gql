@@ -1,0 +1,11 @@
+{
+  getObjects(
+    bucket_slug: ""
+    input: { limit: 20, read_key: "", type: "posts" }
+  ) {
+    objects {
+      title
+      content
+    }
+  }
+}
