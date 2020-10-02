@@ -1,11 +1,11 @@
 {
   getObjects(
-    bucket_slug: ""
-    input: { limit: 20, read_key: "", type: "posts" }
+    bucket_slug: "4de7e7c0-fae5-11ea-8557-5f4aa16f6aca"
+    input: { limit: 20, read_key: "28YFCoG6ICCznAoqhEys9EQEeeSk2Axq4fGBCJpbg41FMDQUrZ", type: "posts" }
   ) {
     objects {
+      slug
       title
-      content
     }
   }
 }

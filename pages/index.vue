@@ -4,8 +4,10 @@
       <h1 class="title text-5xl">nuxt-full-static</h1>
       <div v-for="obj in getObjects.objects" :key="obj.title">
         <div class="border-solid my-10 p-10 bg-green-200">
-          <div class="text-6xl">{{ obj.title }}</div>
-          <div v-html="obj.content"></div>
+          <nuxt-link :to="'/blog/'+obj.slug">
+            <div class="text-6xl">{{ obj.title }}</div>
+          </nuxt-link>
+          <!-- <div v-html="obj.content"></div> -->
         </div>
       </div>
     </div>
@@ -18,9 +20,9 @@ export default {
   apollo: {
     getObjects: {
       prefetch: true,
-      query: getObjects
-    }
-  }
+      query: getObjects,
+    },
+  },
 };
 </script>
 
